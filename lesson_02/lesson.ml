@@ -22,3 +22,12 @@ sos 2 3;;
  *13
  *)
 
+ 
+ (*Syntax of if*)
+ 
+ let sign n =
+	if n > 0 then 1
+	else if n = 0 then 0
+	else n;;
+
+sign 5;;
