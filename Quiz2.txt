@@ -1,0 +1,16 @@
+1. Show the evaluation of the expression is_even 3, given the following definitions
+
+	let rec is_even n =
+	    if n=0 then true
+	    else is_odd (n-1)
+	and is_odd n =
+	    if n= 0 then false
+	    else is_even (n-1)
+
+2.A school management system stores the names of each student and the classroom that they belong to.
+  A classroom is identified by an integer grade and letter section such as 2A, 5B, 	  6F, ...
+
+  Do the following:
+
+  1. Define record types for student, and classroom.
+  2. Define a boolean function "same_grade" which check whether two students belong to the same grade (but not necessarily same classroom!)
