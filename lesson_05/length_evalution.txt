@@ -1,0 +1,29 @@
+let rec length l = match l with
+| hd::tl -> 1 + length tl
+| [] -> 0;;
+
+let l1=1::2::[];;
+
+length l1 2;;
+
+*********** Evalution ***********
+
+* match l1 with
+   	| hd::tl -> 1 + length tl
+	| [] -> 0;;
+
+* match 1::2::[] with
+   	| 1::(2::[]) -> 1 + length 2::[]
+	| [] -> 0;;
+
+* 1 + match 2::[] with
+   		| 2::[] -> 1 + length []
+		| [] -> 0;;
+
+* 1 + 1 + length []
+
+* 2 + match [] with
+		| hd::tl -> 1 + length[]
+		| [] -> 0
+
+* 2 + 0 =3
