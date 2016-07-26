@@ -26,3 +26,26 @@ let rec contains l i=
   match l with
     |hd::tl -> if hd=i then true else contains tl i
     |[] -> false;;
+
+let rec count l i = match l with 
+  |hd::tl -> (if hd=i then 1 else 0) + count tl i
+  |[] -> 0;;
+
+let rec length l = match l with
+  |hd::tl -> 1 + length tl
+  |[] -> 0;;
+
+let rec lastVal l = match l with
+  |hd::[] -> hd
+  |hd::tl -> lastVal tl
+  |[] -> -1;;
+
+
+lastVal 1i3;;
+
+let rec append l1 l2 = match (l1,l2) with
+  |(_,[])-> l1
+  |([],l2)-> l2
+  |(hd::tl, l2)-> hd:: append tl l2;;
+
+append li3 li2;;
