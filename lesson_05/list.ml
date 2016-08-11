@@ -35,17 +35,61 @@ let rec length l = match l with
   |hd::tl -> 1 + length tl
   |[] -> 0;;
 
-let rec lastVal l = match l with
+let rec last_item l = match l with
+  |[] -> -1
   |hd::[] -> hd
-  |hd::tl -> lastVal tl
-  |[] -> -1;;
+  |hd::tl -> lastVal tl;;
 
-
-lastVal 1i3;;
+last_item li3;;
 
 let rec append l1 l2 = match (l1,l2) with
-  |(_,[])-> l1
   |([],l2)-> l2
   |(hd::tl, l2)-> hd:: append tl l2;;
 
 append li3 li2;;
+
+let rec append_new l1 l2 = match l1 with
+  | [] -> l2
+  | hd::tl -> hd::append_new tl l2;;
+
+append_new li3 li2;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
